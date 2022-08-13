@@ -1,0 +1,138 @@
+  "ingredient": [
+    {
+      "id": 1,
+      "name": "Alma"
+    },
+    {
+      "id": 2,
+      "name": "Toyuq"
+    },
+    {
+      "id": 3,
+      "name": "Ət"
+    },
+    {
+      "id": 4,
+      "name": "Ördək"
+    },
+    {
+      "id": 5,
+      "name": "Balıq"
+    },
+    {
+      "id": 6,
+      "name": "Düyü"
+    },
+    {
+      "id": 7,
+      "name": "Pasta"
+    },
+    {
+      "id": 8,
+      "name": "Lobya"
+    },
+    {
+      "id": 9,
+      "name": "Qızılbalıq"
+    },
+    {
+      "id": 10,
+      "name": "Pomidor"
+    },
+    {
+      "id": 11,
+      "name": "Un"
+    },
+    {
+      "id": 12,
+      "name": "Süd"
+    },
+    {
+      "id": 13,
+      "name": "Tofu"
+    },
+    {
+      "id": 14,
+      "name": "Kartof"
+    },
+    {
+      "id": 15,
+      "name": "Pendir"
+    },
+    {
+      "id": 16,
+      "name": "Brokoli"
+    },
+    {
+      "id": 17,
+      "name": "Göbələk"
+    },
+    {
+      "id": 18,
+      "name": "Noxud"
+    },
+    {
+      "id": 19,
+      "name": "Yumurta"
+    },
+    {
+      "id": 20,
+      "name": "Bibər"
+    },
+    {
+      "id": 21,
+      "name": "Avokado"
+    },
+    {
+      "id": 22,
+      "name": "Şokolad"
+    },
+    {
+      "id": 23,
+      "name": "Kəsmik"
+    },
+    {
+      "id": 24,
+      "name": "Kokos südü"
+    },
+    {
+      "id": 25,
+      "name": "Manqo"
+    },
+    {
+      "id": 26,
+      "name": "Banan"
+    },
+    {
+      "id": 27,
+      "name": "Çiyələk"
+    },
+    {
+      "id": 28,
+      "name": "Qaragilə"
+    },
+    {
+      "id": 29,
+      "name": "Kofe"
+    },
+    {
+      "id": 30,
+      "name": "Kök"
+    },
+    {
+      "id": 31,
+      "name": "Şaftalı"
+    },
+    {
+      "id": 32,
+      "name": "Çay"
+    },
+    {
+      "id": 33,
+      "name": "Bal"
+    },
+    {
+      "id": 33,
+      "name": "Alkoqol"
+    }
+  ],

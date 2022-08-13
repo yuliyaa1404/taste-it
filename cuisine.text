@@ -1,0 +1,46 @@
+  "cuisine": [
+    {
+      "id": 1,
+      "name": "İtaliya"
+    },
+    {
+      "id": 2,
+      "name": "Meksika"
+    },
+    {
+      "id": 3,
+      "name": "Fransa"
+    },
+    {
+      "id": 4,
+      "name": "İndia"
+    },
+    {
+      "id": 5,
+      "name": "Asiya"
+    },
+    {
+      "id": 6,
+      "name": "Azərbaycan"
+    },
+    {
+      "id": 7,
+      "name": "Rusiya"
+    },
+    {
+      "id": 8,
+      "name": "Yapon"
+    },
+    {
+      "id": 9,
+      "name": "Koreya"
+    },
+    {
+      "id": 10,
+      "name": "Fransa"
+    },
+	 {
+		"id": 11,
+		"name": "Belçika"
+	 }
+  ],
