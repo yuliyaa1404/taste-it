@@ -8,19 +8,19 @@ function QuickView({ idItem, dispatch, quickView, quickViewShow, favorite }) {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      let data = await fetch(`http://localhost:7700/products`).then((a) =>
-        a.json()
-      );
-      setProducts(data);
+      let data = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setProducts(data.products);
     };
     getData();
   }, []);
   useEffect(() => {
     let getReviews = async () => {
-      let reviewsData = await fetch(`http://localhost:7700/reviews`).then(
-        (a) => a.json()
-      );
-      setReviews(reviewsData);
+      let reviewsData = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setReviews(reviewsData.reviews);
     };
     getReviews();
   }, []);

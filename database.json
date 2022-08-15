@@ -4414,7 +4414,7 @@
       ]
     }
   ],
-  "market-categories": [
+  "market_categories": [
     {
       "id": 1,
       "name": "Ev yeməyi"

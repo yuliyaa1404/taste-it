@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NotFound() {
   return (
     <>
-      <section className="bg-purple">
+      {/* <section className="bg-purple">
         <div class="central-body">
           <img
             src="http://salehriaz.com/404Page/img/404.svg"
@@ -49,7 +49,7 @@ function NotFound() {
           <div class="star"></div>
           <div class="star"></div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

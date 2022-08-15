@@ -10,10 +10,10 @@ function Hamburger({ menu, setMenu, dispatch }) {
   const [clicked, setClicked] = useState(false);
   useEffect(() => {
     let getCategory = async () => {
-      let data = await fetch(`http://localhost:7700/categories`).then((a) =>
-        a.json()
-      );
-      setCategory(data);
+      let data = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setCategory(data.categories);
     };
     getCategory();
   }, []);
@@ -49,7 +49,6 @@ function Hamburger({ menu, setMenu, dispatch }) {
         >
           &times;
         </div>
-		  {/* <div className="ham__logo">Taste it</div> */}
         <ul className="ham__menu">
           <li
             onClick={() => {
@@ -60,7 +59,7 @@ function Hamburger({ menu, setMenu, dispatch }) {
               });
             }}
           >
-            <NavLink to="/">Ana səhifə</NavLink>
+            <NavLink to="/taste-it">Ana səhifə</NavLink>
           </li>
           <li
             onClick={() => {

@@ -18,39 +18,39 @@ function Filter() {
   const [active, setActive] = useState(0);
   useEffect(() => {
     let getCategory = async () => {
-      let data = await fetch(`http://localhost:7700/categories`).then((a) =>
-        a.json()
-      );
-      setCategory(data);
+      let data = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setCategory(data.categories);
     };
     getCategory();
   }, []);
   useEffect(() => {
     let getCuisine = async () => {
-      let data = await fetch(`http://localhost:7700/cuisine`).then((a) =>
-        a.json()
-      );
-      setCuisine(data);
+      let data = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setCuisine(data.cuisine);
     };
     getCuisine();
   }, []);
   useEffect(() => {
     let getIngredient = async () => {
-      let data = await fetch(`http://localhost:7700/ingredient`).then((a) =>
-        a.json()
-      );
-      setFullIngredient(data);
-      setIngredient(data.slice(0, 8));
+      let data = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setFullIngredient(data.ingredient);
+      setIngredient(data.ingredient.slice(0, 8));
     };
     getIngredient();
   }, []);
   useEffect(() => {
     const getData = async () => {
-      let data = await fetch(`http://localhost:7700/products`).then((a) =>
-        a.json()
-      );
-      setProducts(data);
-      setFilteredProducts(data);
+      let data = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setProducts(data.products);
+      setFilteredProducts(data.products);
     };
     getData();
   }, []);

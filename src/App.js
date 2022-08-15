@@ -30,7 +30,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route path="/taste-it" element={<MainPage />} />
         <Route path="/details/:id" element={<Details />} />
         <Route path="/search/:query" element={<Search />} />
         <Route path="/search" element={<Search />} />
@@ -45,7 +45,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog_details/:blogId" element={<BlogDetails />} />
-		  <Route path="*" element={<NotFound/>}/>
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
       <Footer />
     </>

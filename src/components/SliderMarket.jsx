@@ -16,9 +16,9 @@ function SliderMarket({ market, favorite }) {
   useEffect(() => {
     let getMarketiCategory = async () => {
       let dataCategory = await fetch(
-        `http://localhost:7700/market-categories`
+        `https://yuliyaa1404.github.io/json-api/database.json`
       ).then((a) => a.json());
-      setMarketCategory(dataCategory);
+      setMarketCategory(dataCategory.market_categories);
     };
     getMarketiCategory();
   }, []);
@@ -26,7 +26,7 @@ function SliderMarket({ market, favorite }) {
   const swiper = useSwiper();
   return (
     <>
-      <div className="slider">
+      {/* <div className="slider">
         <Swiper
           slidesPerView={4}
           spaceBetween={30}
@@ -86,7 +86,7 @@ function SliderMarket({ market, favorite }) {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </div> */}
     </>
   );
 }

@@ -24,19 +24,19 @@ function Market({ dispatch, basket, peopleCount, dishCount, price }) {
   useEffect(() => {
     let getMarketiCategory = async () => {
       let dataCategory = await fetch(
-        `http://localhost:7700/market-categories`
+        `https://yuliyaa1404.github.io/json-api/database.json`
       ).then((a) => a.json());
-      setMarketCategory(dataCategory);
+      setMarketCategory(dataCategory.market_categories);
     };
     getMarketiCategory();
   }, []);
   //   console.log(process.env);
   useState(() => {
     let getMarket = async () => {
-      let data = await fetch(`http://localhost:7700/market`).then((a) =>
-        a.json()
-      );
-      setMarket(data);
+      let data = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setMarket(data.market);
     };
     getMarket();
   }, []);

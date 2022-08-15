@@ -22,9 +22,9 @@ function BlogDetails({ dispatch }) {
   useEffect(() => {
     let getBlogCategory = async () => {
       let blogCategoryData = await fetch(
-        `http://localhost:7700/blog_categories`
+        `https://yuliyaa1404.github.io/json-api/database.json`
       ).then((a) => a.json());
-      setBlogCategory(blogCategoryData);
+      setBlogCategory(blogCategoryData.blog_categories);
     };
     getBlogCategory();
   }, []);

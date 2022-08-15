@@ -16,10 +16,10 @@ function Slider({ slides, dispatch, favorite}) {
     const [categories, setCategories] = useState([]);
     useEffect(() => {
       const getCategory = async () => {
-        let dataCategory = await fetch(`http://localhost:7700/categories`).then(
-          (a) => a.json()
-        );
-        setCategories(dataCategory);
+        let dataCategory = await fetch(
+          `https://yuliyaa1404.github.io/json-api/database.json`
+        ).then((a) => a.json());
+        setCategories(dataCategory.categories);
       };
       getCategory();
     }, []);

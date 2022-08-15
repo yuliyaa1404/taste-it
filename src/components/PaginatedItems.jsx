@@ -10,10 +10,10 @@ function PaginatedItems({ itemsPerPage }) {
   const [blog, setBlog] = useState([]);
   useEffect(() => {
     let getBlogData = async () => {
-      let blogData = await fetch(`http://localhost:7700/blog`).then((a) =>
-        a.json()
-      );
-      setBlog(blogData);
+      let blogData = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setBlog(blogData.blog);
     };
     getBlogData();
   }, []);

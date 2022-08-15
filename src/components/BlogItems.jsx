@@ -9,18 +9,18 @@ function BlogItems({ currentItems }) {
   useEffect(() => {
     let getBlogCategory = async () => {
       let blogCategoryData = await fetch(
-        `http://localhost:7700/blog_categories`
+        `https://yuliyaa1404.github.io/json-api/database.json`
       ).then((a) => a.json());
-      setBlogCategory(blogCategoryData);
+      setBlogCategory(blogCategoryData.blog_categories);
     };
     getBlogCategory();
   }, [currentItems]);
   useEffect(() => {
     let getBlogData = async () => {
-      let blogData = await fetch(`http://localhost:7700/blog`).then((a) =>
-        a.json()
-      );
-      setBlog(blogData);
+      let blogData = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setBlog(blogData.blog);
     };
     getBlogData();
   }, [currentItems]);

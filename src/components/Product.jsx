@@ -8,9 +8,9 @@ function Product({ id, product, dispatch, favorite, category }) {
 	  useEffect(() => {
       const getCategory = async () => {
         let dataCategory = await fetch(
-          `http://localhost:7700/categories`
+          `https://yuliyaa1404.github.io/json-api/database.json`
         ).then((a) => a.json());
-        setCategories(dataCategory);
+        setCategories(dataCategory.categories);
       };
       getCategory();
     }, []);

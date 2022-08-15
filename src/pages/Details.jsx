@@ -30,19 +30,19 @@ function Details({ dispatch, favorite }) {
   }, []);
   useEffect(() => {
     let getReviews = async () => {
-      let reviewsData = await fetch(`http://localhost:7700/reviews`).then((a) =>
-        a.json()
-      );
-      setReviews(reviewsData);
+      let reviewsData = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setReviews(reviewsData.reviews);
     };
     getReviews();
   }, []);
   useEffect(() => {
     let getRelated = async () => {
-      let relatedData = await fetch(`http://localhost:7700/products`).then(
-        (a) => a.json()
-      );
-      setRelated(relatedData);
+      let relatedData = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setRelated(relatedData.products);
     };
     getRelated();
   }, []);

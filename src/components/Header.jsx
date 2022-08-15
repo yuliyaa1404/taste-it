@@ -17,10 +17,10 @@ function Header(props, headerShow) {
   const scrollBy = useScrollBy();
   useEffect(() => {
     let getCategory = async () => {
-      let data = await fetch(`http://localhost:7700/categories`).then((a) =>
-        a.json()
-      );
-      setCategory(data);
+      let data = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setCategory(data.categories);
     };
     getCategory();
   }, []);
@@ -81,8 +81,8 @@ function Header(props, headerShow) {
         <div className="container">
           <div className="header__wrapper">
             <NavLink
-              to="/"
-               className={scroll ? "header__logo scrolled" : "header__logo"}
+              to="/taste-it"
+              className={scroll ? "header__logo scrolled" : "header__logo"}
               style={{
                 color: scroll ? "#222222" : "white",
               }}
@@ -92,11 +92,9 @@ function Header(props, headerShow) {
               </div>
               <div className="header__logo-text">Taste It</div>
             </NavLink>
-            <ul
-              className={scroll ? "header__menu scrolled" : "header__menu"}
-            >
+            <ul className={scroll ? "header__menu scrolled" : "header__menu"}>
               <li>
-                <NavLink to="/">Ana səhifə</NavLink>
+                <NavLink to="/taste-it">Ana səhifə</NavLink>
               </li>
               <li className="opened">
                 <NavLink to="/recipes">Reseptlər</NavLink>

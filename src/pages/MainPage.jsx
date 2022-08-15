@@ -24,62 +24,61 @@ function MainPage({ dispatch}) {
   useEffect(() => {
     let getMarketiCategory = async () => {
       let dataCategory = await fetch(
-        `http://localhost:7700/market-categories`
+        `https://yuliyaa1404.github.io/json-api/database.json`
       ).then((a) => a.json());
-      setMarketCategory(dataCategory);
+      setMarketCategory(dataCategory.market-categories);
     };
     getMarketiCategory();
   }, []);
   useState(() => {
     let getMarket = async () => {
-      let data = await fetch(`http://localhost:7700/market`).then((a) =>
-        a.json()
-      );
-      setMarket(data);
+      let data = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setMarket(data.market);
     };
     getMarket();
   }, []);
   useEffect(() => {
     let getBlogCategory = async () => {
       let blogCategoryData = await fetch(
-        `http://localhost:7700/blog_categories`
+        `https://yuliyaa1404.github.io/json-api/database.json`
       ).then((a) => a.json());
-      setBlogCategory(blogCategoryData);
+      setBlogCategory(blogCategoryData.blog_categories);
     };
     getBlogCategory();
   }, []);
   useEffect(() => {
     let getBlogData = async () => {
-      let blogData = await fetch(`http://localhost:7700/blog`).then((a) =>
-        a.json()
-      );
-      setBlog(blogData);
+      let blogData = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setBlog(blogData.blog);
     };
     getBlogData();
   }, []);
-//   useEffect(() => {
-//     const getData = async () => {
-//       let data = await fetch(
-//         `https://yuliyaa1404.github.io/json-api/database.json/products`
-//       ).then((a) => a.json());
-//       setProducts(data);
-// 		console.log(data)
-//     };
-//     getData();
-//   }, []);
-useEffect(() => {
-	axios.get("https://yuliyaa1404.github.io/json-api/database.json").then((res) => {
-		console.log(res.data.products)
-		setProducts(res.data.products)
-	});
-},[])
+  useEffect(() => {
+    const getData = async () => {
+      let data = await fetch(
+        `https://yuliyaa1404.github.io/json-api/database.json`
+      ).then((a) => a.json());
+      setProducts(data.products);
+    };
+    getData();
+  }, []);
+// useEffect(() => {
+// 	axios.get("https://yuliyaa1404.github.io/json-api/database.json").then((res) => {
+// 		console.log(res.data.products)
+// 		setProducts(res.data.products)
+// 	});
+// },[])
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     const getCategory = async () => {
       let dataCategory = await fetch(
-        `http://localhost:7700/categories`
+        `https://yuliyaa1404.github.io/json-api/database.json`
       ).then((a) => a.json());
-      setCategories(dataCategory);
+      setCategories(dataCategory.categories);
     };
     getCategory();
   }, []);
