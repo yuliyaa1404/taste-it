@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import BasketIcon from "../components/BasketIcon";
 import FavoritesIcon from "../components/FavoritesIcon";
 import QuickView from "../components/QuickView";
+import axios from "axios";
 
 function MainPage({ dispatch}) {
   const [inputValue, setInputValue] = useState("");
@@ -56,15 +57,22 @@ function MainPage({ dispatch}) {
     };
     getBlogData();
   }, []);
-  useEffect(() => {
-    const getData = async () => {
-      let data = await fetch(`http://localhost:7700/products`).then((a) =>
-        a.json()
-      );
-      setProducts(data);
-    };
-    getData();
-  }, []);
+//   useEffect(() => {
+//     const getData = async () => {
+//       let data = await fetch(
+//         `https://yuliyaa1404.github.io/json-api/database.json/products`
+//       ).then((a) => a.json());
+//       setProducts(data);
+// 		console.log(data)
+//     };
+//     getData();
+//   }, []);
+useEffect(() => {
+	axios.get("https://yuliyaa1404.github.io/json-api/database.json").then((res) => {
+		console.log(res.data.products)
+		setProducts(res.data.products)
+	});
+},[])
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     const getCategory = async () => {
