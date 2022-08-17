@@ -2,13 +2,17 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import Login from "../components/Login";
+import BasketIcon from "../components/BasketIcon";
+import FavoritesIcon from "../components/FavoritesIcon";
 
-function ContactUs({ dispatch }) {
+function ContactUs() {
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const [login, setLogin] = useState(false);
   return (
     <>
+      <BasketIcon />
+      <FavoritesIcon />
       <Login login={login} setLogin={setLogin} />
       <section className="contact">
         <div className="contact__wrapper">

@@ -24,7 +24,7 @@ function Favorites({ props, favorite, dispatch }) {
             {favorite.length > 0 ? (
               favorite.map((product) => {
                 return (
-                  <div className="product">
+                  <div key={product.id} className="product">
                     <div className="product__image">
                       <img src={product.image} alt="" />
                       <div

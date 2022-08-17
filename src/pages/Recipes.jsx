@@ -37,18 +37,16 @@ function Recipes() {
       <FavoritesIcon />
       <QuickView />
       <section className="info">
-        <div className="info__content">
-          {category
-            .filter((a) => a.id == categoryId)
-            .map((a) => {
-              return (
-                <>
-                  <h1 className="info__title title">{a.name} Reseptləri</h1>
-                  <h4 className="info__subtitle subtitle">{a.title}</h4>
-                </>
-              );
-            })}
-        </div>
+        {category
+          .filter((a) => a.id == categoryId)
+          .map((a) => {
+            return (
+              <div key={a.id} className="info__content">
+                <h1 className="info__title title">{a.name} Reseptləri</h1>
+                <h4 className="info__subtitle subtitle">{a.title}</h4>
+              </div>
+            );
+          })}
       </section>
       <section className="category">
         <div className="container">

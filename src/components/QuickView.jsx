@@ -40,8 +40,7 @@ function QuickView({ idItem, dispatch, quickView, quickViewShow, favorite }) {
             .filter((t) => t.id == quickView)
             .map((a, c) => {
               return (
-                <>
-                  <div key={a.id + 100} className="quick__item">
+                  <div key={c} className="quick__item">
                     <div className="quick__img">
                       <img src={a.image} alt="" />
                     </div>
@@ -111,7 +110,6 @@ function QuickView({ idItem, dispatch, quickView, quickViewShow, favorite }) {
                       </div>
                     </div>
                   </div>
-                </>
               );
             })}
         </div>

@@ -92,7 +92,7 @@ function Blog({ tabCategory, dispatch }) {
               blog
                 .filter((t) => t.category == tabCategory)
                 .map((a, b) => (
-                  <div key={a.id} className="blog__item">
+                  <div key={b} className="blog__item">
                     <div className="blog__img">
                       <img src={a.image} alt="" />
                     </div>

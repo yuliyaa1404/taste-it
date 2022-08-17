@@ -49,7 +49,7 @@ function BasketPage({ dispatch, basket, peopleCount, dishCount, price }) {
               <p className="basket__label">Təsvir</p>
               <ul className="basket__row">
                 {basket.map((a) => (
-                  <li className="basket__card">
+                  <li key={a.id} className="basket__card">
                     <div className="basket__img">
                       <img src={a.image} alt="" />
                     </div>

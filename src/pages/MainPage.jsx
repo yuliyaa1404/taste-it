@@ -66,12 +66,6 @@ function MainPage({ dispatch}) {
     };
     getData();
   }, []);
-// useEffect(() => {
-// 	axios.get("https://yuliyaa1404.github.io/json-api/database.json").then((res) => {
-// 		console.log(res.data.products)
-// 		setProducts(res.data.products)
-// 	});
-// },[])
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     const getCategory = async () => {
@@ -101,11 +95,8 @@ function MainPage({ dispatch}) {
     let s = [];
     if (blog.length) {
       for (let i = 0; i < 3; i++) {
-        // setSelectedBlog(blog[i])
-        // setSelectedBlog.push(blog[i])
         s.push(blog[i]);
       }
-      // console.log(s)
       t = s;
       setSelectedBlog(t);
     }
@@ -192,7 +183,7 @@ function MainPage({ dispatch}) {
                 </p>
               </div>
             </div>
-            <Link to="/about_market">
+            <Link to="/about_us">
               <p className="shop__btn wave-btn ">
                 <span className="wave-btn__text">Daha ətraflı</span>
                 <span className="wave-btn__waves"></span>
@@ -391,7 +382,7 @@ function MainPage({ dispatch}) {
       </div>
       <section
         className="plan"
-        style={{ backgroundImage: `url(/img/main_banner_1.webp)` }}
+      //   style={{ backgroundImage: `url(/img/main_banner_1.webp)` }}
       >
         <div className="plan__content">
           <h2 className="plan__title">
@@ -445,7 +436,7 @@ function MainPage({ dispatch}) {
                           {blogCategory
                             .filter((t) => t.id == a.category)
                             .map((b) => (
-                              <p>{b.name}</p>
+                              <p key={b.id}>{b.name}</p>
                             ))}
                         </div>
                       </Link>

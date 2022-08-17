@@ -11,10 +11,7 @@ function Filter() {
   const [ingredient, setIngredient] = useState([]);
   const [fullIngredient, setFullIngredient] = useState([]);
   const [products, setProducts] = useState([]);
-  const [checked, setChecked] = useState(false);
-  const [selected, setSelected] = useState([]);
   const [showMore, setShowMore] = useState(false);
-  const [inputValue, setInputValue] = useState("");
   const [active, setActive] = useState(0);
   useEffect(() => {
     let getCategory = async () => {
@@ -122,7 +119,6 @@ function Filter() {
             <ul className="filter__list">
               <li className="filter__opened">
                 Kateqoriya
-                {/* <i className="fa-solid fa-caret-down"></i> */}
                 <i className="fa-solid fa-chevron-down"></i>
                 <ul className="filter__dropdown">
                   {category.map((a) => (
@@ -152,8 +148,6 @@ function Filter() {
                         <input
                           name="cuisine"
                           onChange={handleChange}
-                          //  onChange={() => handleChange()}
-
                           type="checkbox"
                           id={a.name}
                           value={a.id}
@@ -197,8 +191,8 @@ function Filter() {
             >
               <div className="container">
                 <div className="filter__row">
-                  {fullIngredient.map((a) => (
-                    <div className="filter__item" key={"full" + a.id}>
+                  {fullIngredient.map((a, b) => (
+                    <div className="filter__item" key={"full" + b}>
                       <label htmlFor={a.name}>
                         <input
                           name="ingredient"
@@ -232,7 +226,6 @@ function Filter() {
             <h3 className="result__title">Reseptləri araşdırın</h3>
             <ul className="result__list">
               <li
-                dataId="0"
                 className={0 == active ? "result__active-list" : ""}
                 onClick={(e) => {
                   setFilter({

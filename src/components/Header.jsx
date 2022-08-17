@@ -172,8 +172,8 @@ function Header(props, headerShow) {
               >
                 <i className="fa-solid fa-bars"></i>
               </div>
-              <div class="header__switcher">
-                <div class="header__thumb"></div>
+              <div className="header__switcher">
+                <div className="header__thumb"></div>
               </div>
             </div>
           </div>
